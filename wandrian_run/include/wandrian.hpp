@@ -11,8 +11,9 @@
 #include "common/vector.hpp"
 #include "core.hpp"
 #include "plans/spiral_stc/spiral_stc.hpp"
+#include "plans/wavefront/wavefront.hpp"
 
-using namespace wandrian::plans::spiral_stc;
+using namespace wandrian::plans::wavefront;
 
 namespace wandrian {
 
@@ -22,7 +23,7 @@ protected:
   void run();
 
 private:
-  SpiralStcPtr spiral_stc;
+  WavefrontPtr wavefront;
 
   // Helpers
   bool go_to(PointPtr, bool);

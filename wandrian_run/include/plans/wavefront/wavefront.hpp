@@ -25,43 +25,41 @@
 #define MAP_X 8
 #define MAP_Y 8
 
-using namespace wandrian::common;
+ using namespace wandrian::common;
 
-namespace wandrian {
-namespace plans {
-namespace wavefront {
+ namespace wandrian {
+  namespace plans {
+    namespace wavefront {
 
-class Wavefront: public BasePlan {
+      class Wavefront: public BasePlan {
+      public:
+        Wavefront();
+        ~Wavefront();
+        void initialize(Cell, Cell, double);
+        void cover();
 
-public:
-  Wavefront();
-  ~Wavefront();
-  void initialize(CellPtr, CellPtr, double);
-  void cover();
+      protected:
+        bool go_to(PointPtr, bool);
+        bool go_by_step(Cell, Cell);
 
-protected:
-  bool go_to(PointPtr, bool);
-  bool go_by_step(Cell, Cell);
+      private:
+        std::vector < std::vector<int > > WORLD_MAP;
+        std::stack<Cell> path;
+        Cell start;
+        Cell goal;
+        double robot_size;
 
-private:
-  int WORLD_MAP[MAP_X][MAP_Y];
-  std::stack<Cell> path;
-  Cell start;
-  Cell goal;
-  double robot_size;
+        void wave_fill();
+        bool check_coordinate(Cell);
+        int get_cell_value(Cell);
 
-  void wave_fill();
-  bool check_coordinate(Cell);
-  int get_cell_value(Cell);
+        void path_planning();
+        Cell get_next_hop(Cell);
+      };
 
-  void path_planning();
-  Cell get_next_hop(Cell);
-};
-
-//typedef boost::shared_ptr<Wavefront> Wavefront;
-
-}
-}
+      typedef boost::shared_ptr<Wavefront> WavefrontPtr;
+    }
+  }
 }
 
 

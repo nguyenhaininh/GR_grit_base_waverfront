@@ -6,7 +6,7 @@
  */
 
 #include "../include/wandrian.hpp"
-#include "../include/plans/spiral_stc/spiral_stc.hpp"
+#include "../include/plans/wavefront/wavefront.hpp"
 
 #define CLOCKWISE true
 #define COUNTERCLOCKWISE false
@@ -20,14 +20,14 @@ namespace wandrian {
 
 void Wandrian::run() {
   if (plan == "spiral_stc") {
-    spiral_stc = SpiralStcPtr(new SpiralStc());
-    spiral_stc->initialize(
-        PointPtr(new Point(starting_point_x, starting_point_y)), robot_size);
-    spiral_stc->set_behavior_go_to(
+    wavefront = WavefrontPtr(new Wavefront());
+    Cell start, goal;
+    start.x = 0; start.y = 0;
+    goal.x = 7; goal.y = 7;
+    wavefront->initialize(start, goal, robot_size);
+    wavefront->set_behavior_go_to(
         boost::bind(&Wandrian::spiral_stc_go_to, this, _1, _2));
-    spiral_stc->set_behavior_see_obstacle(
-        boost::bind(&Wandrian::spiral_stc_see_obstacle, this, _1, _2));
-    return spiral_stc->cover();
+    return wavefront->cover();
   }
 }
 
