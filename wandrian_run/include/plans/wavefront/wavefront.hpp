@@ -44,7 +44,7 @@
 
       private:
         std::vector < std::vector<int > > WORLD_MAP;
-        std::stack<Cell> path;
+        std::queue<Cell> path;
         Cell start;
         Cell goal;
         double robot_size;

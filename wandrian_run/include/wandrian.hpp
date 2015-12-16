@@ -10,30 +10,31 @@
 
 #include "common/vector.hpp"
 #include "core.hpp"
-#include "plans/spiral_stc/spiral_stc.hpp"
 #include "plans/wavefront/wavefront.hpp"
 
 using namespace wandrian::plans::wavefront;
 
 namespace wandrian {
 
-class Wandrian: public Core {
+class Wandrian {
 
-protected:
-  void run();
+public:
+  bool initialize();
+  void spin();
 
 private:
-  WavefrontPtr wavefront;
+  Core core;
+
+  // Behaviors
+  void wandrian_run();
+  bool wavefront_go_to(PointPtr, bool);
+  bool spiral_stc_see_obstacle(VectorPtr, double);
 
   // Helpers
   bool go_to(PointPtr, bool);
-  bool rotate(PointPtr, bool);
+  bool rotate_to(PointPtr, bool);
+  void go(bool);
   void rotate(bool);
-  void move(bool);
-
-  // Behaviors
-  bool spiral_stc_go_to(PointPtr, bool);
-  bool spiral_stc_see_obstacle(VectorPtr, double);
 };
 
 }

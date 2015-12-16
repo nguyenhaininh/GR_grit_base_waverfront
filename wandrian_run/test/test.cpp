@@ -14,10 +14,11 @@
 #include <boost/next_prior.hpp>
 #include <sstream>
 #include <fstream>
-#include "../include/plans/spiral_stc/spiral_stc.hpp"
+
+#include "../include/plans/wavefront/wavefront.hpp"
 
 #define R_SIZE 0.5 // robot size
-#define E_SIZE 20.0 // default environment size
+#define E_SIZE 4.0 // default environment size
 #define WORLD_INSERT_OBSTACLE "<!-- INSERT: Bound and Obstacles here -->" // flag at original world file to insert bound and obstacles into
 
 using namespace wandrian::plans::spiral_stc;
@@ -40,9 +41,9 @@ SpiralStcPtr spiral_stc;
   }
   glVertex2d((*points.begin())->x, (*points.begin())->y);
   glEnd();
-}*/
+}
 
-/*void display() {
+void display() {
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
   glLoadIdentity();
 
@@ -111,15 +112,17 @@ int run(int argc, char **argv) {
   glutDisplayFunc(display);
   glutMainLoop();
   return 0;
-}*/
-
+}
+*/
 int main(int argc, char **argv) {
-  if (argc >= 1) {
+  if (argc >= 2) {
     std::istringstream iss(argv[1]);
     if (!(iss >> e_size)
-        || !(4 <= e_size && e_size <= E_SIZE && (int) e_size % 4 == 0)) {
+        || !(4 <= e_size && e_size <= 20 && (int) e_size % 2 == 0)) {
       e_size = E_SIZE;
     }
+  } else {
+    e_size = E_SIZE;
   }
 
   CellPtr space = CellPtr(new Cell(PointPtr(new Point(0, 0)), e_size));

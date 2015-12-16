@@ -257,112 +257,168 @@
       <include>
         <uri>model://cinder_block</uri>
       </include>
-      <pose>0.25 1.125 0 0 0 0</pose>
+      <pose>-1.75 -0.875 0 0 0 0</pose>
       <static>1</static>
     </model>
     <model name='cinder_block_obstacle_1_2'>
       <include>
         <uri>model://cinder_block</uri>
       </include>
-      <pose>0.25 1.375 0 0 0 0</pose>
+      <pose>-1.75 -0.625 0 0 0 0</pose>
       <static>1</static>
     </model>
     <model name='cinder_block_obstacle_1_3'>
       <include>
         <uri>model://cinder_block</uri>
       </include>
-      <pose>0.25 1.625 0 0 0 0</pose>
+      <pose>-1.75 -0.375 0 0 0 0</pose>
       <static>1</static>
     </model>
     <model name='cinder_block_obstacle_1_4'>
       <include>
         <uri>model://cinder_block</uri>
       </include>
-      <pose>0.25 1.875 0 0 0 0</pose>
+      <pose>-1.75 -0.125 0 0 0 0</pose>
       <static>1</static>
     </model>
     <model name='cinder_block_obstacle_1_5'>
       <include>
         <uri>model://cinder_block</uri>
       </include>
-      <pose>0.75 1.125 0 0 0 0</pose>
+      <pose>-1.25 -0.875 0 0 0 0</pose>
       <static>1</static>
     </model>
     <model name='cinder_block_obstacle_1_6'>
       <include>
         <uri>model://cinder_block</uri>
       </include>
-      <pose>0.75 1.375 0 0 0 0</pose>
+      <pose>-1.25 -0.625 0 0 0 0</pose>
       <static>1</static>
     </model>
     <model name='cinder_block_obstacle_1_7'>
       <include>
         <uri>model://cinder_block</uri>
       </include>
-      <pose>0.75 1.625 0 0 0 0</pose>
+      <pose>-1.25 -0.375 0 0 0 0</pose>
       <static>1</static>
     </model>
     <model name='cinder_block_obstacle_1_8'>
       <include>
         <uri>model://cinder_block</uri>
       </include>
-      <pose>0.75 1.875 0 0 0 0</pose>
+      <pose>-1.25 -0.125 0 0 0 0</pose>
       <static>1</static>
     </model>
     <model name='cinder_block_obstacle_2_1'>
       <include>
         <uri>model://cinder_block</uri>
       </include>
-      <pose>-1.75 -0.875 0 0 0 0</pose>
+      <pose>0.25 1.125 0 0 0 0</pose>
       <static>1</static>
     </model>
     <model name='cinder_block_obstacle_2_2'>
       <include>
         <uri>model://cinder_block</uri>
       </include>
-      <pose>-1.75 -0.625 0 0 0 0</pose>
+      <pose>0.25 1.375 0 0 0 0</pose>
       <static>1</static>
     </model>
     <model name='cinder_block_obstacle_2_3'>
       <include>
         <uri>model://cinder_block</uri>
       </include>
-      <pose>-1.75 -0.375 0 0 0 0</pose>
+      <pose>0.25 1.625 0 0 0 0</pose>
       <static>1</static>
     </model>
     <model name='cinder_block_obstacle_2_4'>
       <include>
         <uri>model://cinder_block</uri>
       </include>
-      <pose>-1.75 -0.125 0 0 0 0</pose>
+      <pose>0.25 1.875 0 0 0 0</pose>
       <static>1</static>
     </model>
     <model name='cinder_block_obstacle_2_5'>
       <include>
         <uri>model://cinder_block</uri>
       </include>
-      <pose>-1.25 -0.875 0 0 0 0</pose>
+      <pose>0.75 1.125 0 0 0 0</pose>
       <static>1</static>
     </model>
     <model name='cinder_block_obstacle_2_6'>
       <include>
         <uri>model://cinder_block</uri>
       </include>
-      <pose>-1.25 -0.625 0 0 0 0</pose>
+      <pose>0.75 1.375 0 0 0 0</pose>
       <static>1</static>
     </model>
     <model name='cinder_block_obstacle_2_7'>
       <include>
         <uri>model://cinder_block</uri>
       </include>
-      <pose>-1.25 -0.375 0 0 0 0</pose>
+      <pose>0.75 1.625 0 0 0 0</pose>
       <static>1</static>
     </model>
     <model name='cinder_block_obstacle_2_8'>
       <include>
         <uri>model://cinder_block</uri>
       </include>
-      <pose>-1.25 -0.125 0 0 0 0</pose>
+      <pose>0.75 1.875 0 0 0 0</pose>
+      <static>1</static>
+    </model>
+    <model name='cinder_block_obstacle_3_1'>
+      <include>
+        <uri>model://cinder_block</uri>
+      </include>
+      <pose>-1.75 -1.875 0 0 0 0</pose>
+      <static>1</static>
+    </model>
+    <model name='cinder_block_obstacle_3_2'>
+      <include>
+        <uri>model://cinder_block</uri>
+      </include>
+      <pose>-1.75 -1.625 0 0 0 0</pose>
+      <static>1</static>
+    </model>
+    <model name='cinder_block_obstacle_3_3'>
+      <include>
+        <uri>model://cinder_block</uri>
+      </include>
+      <pose>-1.75 -1.375 0 0 0 0</pose>
+      <static>1</static>
+    </model>
+    <model name='cinder_block_obstacle_3_4'>
+      <include>
+        <uri>model://cinder_block</uri>
+      </include>
+      <pose>-1.75 -1.125 0 0 0 0</pose>
+      <static>1</static>
+    </model>
+    <model name='cinder_block_obstacle_3_5'>
+      <include>
+        <uri>model://cinder_block</uri>
+      </include>
+      <pose>-1.25 -1.875 0 0 0 0</pose>
+      <static>1</static>
+    </model>
+    <model name='cinder_block_obstacle_3_6'>
+      <include>
+        <uri>model://cinder_block</uri>
+      </include>
+      <pose>-1.25 -1.625 0 0 0 0</pose>
+      <static>1</static>
+    </model>
+    <model name='cinder_block_obstacle_3_7'>
+      <include>
+        <uri>model://cinder_block</uri>
+      </include>
+      <pose>-1.25 -1.375 0 0 0 0</pose>
+      <static>1</static>
+    </model>
+    <model name='cinder_block_obstacle_3_8'>
+      <include>
+        <uri>model://cinder_block</uri>
+      </include>
+      <pose>-1.25 -1.125 0 0 0 0</pose>
       <static>1</static>
     </model>
     <gui fullscreen='0'>

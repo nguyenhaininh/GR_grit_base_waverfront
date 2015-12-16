@@ -47,20 +47,30 @@
 
  			void Wavefront::initialize(Cell _start, Cell _goal, double robot_size) {
  				this->robot_size = robot_size;
+ 				cout << "1" << endl;
+ 				int world[MAP_X][MAP_Y] = {
+ 	 					{ 0, X, X, 0, 0, 0, 0, 0 },
+ 	 					{ 0, X, X, 0, 0, 0, 0, 0 },
+ 	 					{ 0, 0, 0, 0, 0, 0, 0, 0 },
+ 	 					{ 0, 0, 0, 0, 0, 0, 0, 0 },
+ 	 					{ 0, 0, 0, 0, 0, 0, 0, 0 },
+ 	 					{ 0, 0, 0, 0, X, 0, 0, 0 },
+ 	 					{ 0, 0, 0, X, X, X, 0, 0 },
+ 	 					{ 0, 0, 0, X, X, 0, 0, 0 }
+ 	 				};
 
- 				WORLD_MAP = {
- 					{ 0, X, X, 0, 0, 0, 0, 0 },
- 					{ 0, X, X, 0, 0, 0, 0, 0 },
- 					{ 0, 0, 0, 0, 0, 0, 0, 0 },
- 					{ 0, 0, 0, 0, 0, 0, 0, 0 },
- 					{ 0, 0, 0, 0, 0, 0, 0, 0 },
- 					{ 0, 0, 0, 0, X, 0, 0, 0 },
- 					{ 0, 0, 0, X, X, X, 0, 0 },
- 					{ 0, 0, 0, X, X, 0, 0, 0 }
- 				};
+ 				for(int i = 0; i <MAP_X; i++) {
+ 					std::vector<int> tmp;
+ 					for(int j = 0; j <MAP_Y; j++) {
+ 						tmp.push_back(world[i][j]);
+ 					}
+ 					WORLD_MAP.push_back(tmp);
+ 				}
+ 				cout << "2" << endl;
+
  				start = _start;
  				goal = _goal;
-
+ 				cout << "3" << endl;
  				WORLD_MAP[goal.x][goal.y] = GOAL;
  			}
 
@@ -71,7 +81,7 @@
  				Cell current = start;
  				Cell next_cell;
  				while (!path.empty()) {
- 					next_cell = path.top();
+ 					next_cell = path.front();
  					path.pop();
 
 					//		PointPtr new_position = PointPtr(
